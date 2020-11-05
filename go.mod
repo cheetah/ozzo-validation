@@ -1,4 +1,4 @@
-module github.com/go-ozzo/ozzo-validation/v4
+module github.com/cheetah/ozzo-validation/v4
 
 go 1.13
 
