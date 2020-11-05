@@ -102,6 +102,8 @@ var (
 	ErrIPv4 = validation.NewError("validation_is_ipv4", "must be a valid IPv4 address")
 	// ErrIPv6 is the error that returns in case of an invalid IPv6.
 	ErrIPv6 = validation.NewError("validation_is_ipv6", "must be a valid IPv6 address")
+	// ErrCIDR is the error that returns in case of an invalid CIDR.
+	ErrCIDR = validation.NewError("validation_is_cird", "must be a valid CIDR")
 	// ErrSubdomain is the error that returns in case of an invalid subdomain.
 	ErrSubdomain = validation.NewError("validation_is_sub_domain", "must be a valid subdomain")
 	// ErrDomain is the error that returns in case of an invalid domain.
@@ -215,6 +217,8 @@ var (
 	IPv4 = validation.NewStringRuleWithError(govalidator.IsIPv4, ErrIPv4)
 	// IPv6 validates if a string is a valid version 6 IP address
 	IPv6 = validation.NewStringRuleWithError(govalidator.IsIPv6, ErrIPv6)
+	// CIDR validates if a string is a valid version 6 IP address
+	CIDR = validation.NewStringRuleWithError(govalidator.IsCIDR, ErrCIDR)
 	// Subdomain validates if a string is valid subdomain
 	Subdomain = validation.NewStringRuleWithError(isSubdomain, ErrSubdomain)
 	// Domain validates if a string is valid domain
